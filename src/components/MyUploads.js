@@ -17,9 +17,9 @@ export default function MyUploads() {
     
   return(
           Notes.length===0?<div className='text-danger text-center'> No Past Uploads Yet...</div>:<div className='row my-3 text-center justify-content-center' style={{width:"99vw"}}>
-            {Notes.map((note,index)=>{
+            {(Notes)?Notes.map((note,index)=>{
                 return <MyUploadItem note={note} key={index}/>
-            })}
+            }):<></>}
         </div>
           
         
